@@ -7,7 +7,7 @@ import { getCovid19Info, getProvincesData, getTerritories } from './api'
 import Covid19 from './components/Covid19'
 import Provinces from './components/Provinces';
 
-//Test the functionalities of Show/Hide Capital
+//Test the functionalities of Show/Hide Capital button
 test('renders <Province>', () => {
     const { getByRole } = render(<Province />)
     const button = getByRole('button')
