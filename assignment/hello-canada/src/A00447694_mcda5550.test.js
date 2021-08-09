@@ -163,20 +163,20 @@ test('check territories count' , async() => {
 })
 
 //check if 3 components (Provinces, Territories, Covid19) are rendered in App
-test('check for 3 components', async () => {
-    getCovid19Info.mockResolvedValueOnce(mockCovidResponse)
-    render(<Covid19 />)
-    await waitFor(() => expect(getCovid19Info).toHaveBeenCalledTimes(1))
+// test('check for 3 components', async () => {
+//     getCovid19Info.mockResolvedValueOnce(mockCovidResponse)
+//     render(<Covid19 />)
+//     await waitFor(() => expect(getCovid19Info).toHaveBeenCalledTimes(1))
 
-    getProvincesData.mockResolvedValueOnce(mockProvincesData)
-    render(<Provinces />)
-    await waitFor(() => expect(getProvincesData).toHaveBeenCalledTimes(1))
+//     getProvincesData.mockResolvedValueOnce(mockProvincesData)
+//     render(<Provinces />)
+//     await waitFor(() => expect(getProvincesData).toHaveBeenCalledTimes(1))
 
-    getTerritories.mockResolvedValueOnce(mockTerretoriesData)
-    render(<Territories />)
-    await waitFor(() => expect(getTerritories).toHaveBeenCalledTimes(1))
+//     getTerritories.mockResolvedValueOnce(mockTerretoriesData)
+//     render(<Territories />)
+//     await waitFor(() => expect(getTerritories).toHaveBeenCalledTimes(1))
 
-    const { getAllByRole } = render(<App />)
-    const components = getAllByRole('paragraph')
-    expect(components.length).toBe(3)
-})
+//     const { getAllByRole } = render(<App />)
+//     const components = getAllByRole('paragraph')
+//     expect(components.length).toBe(3)
+// })
